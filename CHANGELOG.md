@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/pedrotvr/Akita/compare/v0.0.3...v0.0.4) (2020-12-29)
+
+
+### Features
+
+* xpto comment ([cd66d09](https://github.com/pedrotvr/Akita/commit/cd66d09236e280e97b1e02ef64d6d76df4eabc00))
+* xpto comment ([bd50a6f](https://github.com/pedrotvr/Akita/commit/bd50a6fe7c963f14bfe3e9290d973dfa627d7eb7))
+
+
+### Bug Fixes
+
+* teste ([36f0c0e](https://github.com/pedrotvr/Akita/commit/36f0c0e6bfd9fca248bce9d6999cef1ff449cdd2))
+
 ### [0.0.3](https://github.com/pedrotvr/Akita/compare/v0.0.2...v0.0.3) (2020-12-29)
 
 
