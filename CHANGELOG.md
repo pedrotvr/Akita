@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/pedrotvr/Akita/compare/v1.0.0...v1.1.0) (2020-12-30)
+
+
+### Features
+
+* será destA? ([713462e](https://github.com/pedrotvr/Akita/commit/713462e3dda9c2420f4b6641a85dd0d1b9b40aba))
+* será destA? ([dfa5a4e](https://github.com/pedrotvr/Akita/commit/dfa5a4ef0220f919b5fd99ab2686eac9a3b4a6f7))
+* teste ([8d1c943](https://github.com/pedrotvr/Akita/commit/8d1c943abee965ca7b341599dda3d926ca0fe248))
+
+
+### Bug Fixes
+
+* será destA? ([b03bd56](https://github.com/pedrotvr/Akita/commit/b03bd56a2e82dfc0d7283ce297704516fce143be))
+
 ## [1.0.0](https://github.com/pedrotvr/Akita/compare/v0.0.4...v1.0.0) (2020-12-30)
 
 ### [0.0.4](https://github.com/pedrotvr/Akita/compare/v0.0.3...v0.0.4) (2020-12-29)
