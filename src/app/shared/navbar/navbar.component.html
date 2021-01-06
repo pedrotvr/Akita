@@ -1,0 +1,22 @@
+<nav>
+  <div class="nav-wrapper deep-orange darken-2">
+    <a class="brand-logo" routerLink="product">
+      <img src="/assets/logo_header.png" class="logo" style="
+      max-height: 50px;"/>
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a routerLinkActive="" routerLink="cart" [state]="{ hello: 'world' }"
+          ><i class="large material-icons">shopping_cart</i> <span class="badge cyan" style="border-radius: 20px;color: white;
+          position: absolute;
+          top: 31px;
+          width: 30px;
+          min-width: 0px;
+          margin-left: 11px;">{{ count$ | async }}</span></a
+        >
+      </li>
+      <li *ngIf="isLoggedIn$ | async"><a (click)="logout()"><i class="large material-icons">power_settings_new</i>
+      </a></li>
+    </ul>
+  </div>
+</nav>

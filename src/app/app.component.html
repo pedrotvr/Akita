@@ -1,16 +1,15 @@
-<div>
-  Yolo Akita Project
-</div>
-dsafsdfd asfd a
-\
-  sadsad as
-ds
-<div>yoloasdfasf
-qerq adasd
-adsffadsfadsf
-</div>
-
-
-<router-outlet></router-outlet>
-
-
+<section class="flex flex-column height">
+  <ng-container *ngIf="isLoggedIn$ | async">
+    <app-navbar class="block" style="position: fixed; top: 0; width: 100%; z-index: 23;"></app-navbar>
+  </ng-container>
+  <div class="flex-1" >
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="page-footer deep-orange darken-2" ><!-- style="position: fixed; bottom: 0; width: 100%; z-index: 23;" -->
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © AKITA DEMONSTRATION NFON
+      </div>
+    </div>
+  </footer>
+</section>
