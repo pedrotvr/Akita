@@ -1,4 +1,10 @@
-<section class="padding" style="margin-top: 50px;">
+<section class="padding">
+
+  <h1 class="grey-text flex align-center">
+    <i class="large material-icons">shopping_cart</i>
+    Cart
+  </h1>
+
   <ng-container *ngIf="items$ | async as items">
     <table class="striped" *ngIf="items.length">
       <thead>
@@ -14,7 +20,19 @@
         <tr *ngFor="let item of items">
           <td>{{item.title}}</td>
           <td>{{item.description}}</td>
-          <td>{{item.quantity}}</td>
+          <td>
+            <div class="flex">
+
+              <ng-container *ngIf="(cartSpecific.isDirty(item.productId) | async)">
+                <i class="material-icons pointer" (click)="revert(item.productId)">undo</i>
+              </ng-container>
+              <ng-container *ngIf="item.quantity > 1">
+                <i class="material-icons pointer" (click)="subtractProduct(item.productId)">navigate_before</i>
+              </ng-container>
+              <span> {{item.quantity}}</span>
+              <i class="material-icons pointer " (click)="addProduct(item.productId)">navigate_next</i>
+            </div>
+          </td>
           <th>{{item.total}}$</th>
           <th>
             <button (click)="remove(item)" class="btn waves-effect waves-light red">
@@ -29,7 +47,12 @@
 
     <h4 *ngIf="items.length" class="flex align-center">
       <i class="material-icons medium mr5">credit_card</i>
+    <!-- {{cartCollection. | json}} -->
+
       Total: {{total$ | async}}$
+      <ng-container *ngIf="(cartCollection.isDirty$ | async)">
+        <i class="material-icons pointer" (click)="revertStore()">undo</i>
+      </ng-container>
     </h4>
 
   </ng-container>

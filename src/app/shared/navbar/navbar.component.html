@@ -3,6 +3,10 @@
     <a class="brand-logo" routerLink="product">
       <img src="/assets/logo_header.png" class="logo" style="
       max-height: 50px;"/>
+    <span style="
+    padding-left: 25px;
+    vertical-align: top;
+      ">Hey {{userName$ | async}}, </span>
     </a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li>

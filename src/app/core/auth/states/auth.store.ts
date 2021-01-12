@@ -24,7 +24,6 @@ export class AuthStore extends Store<AuthState> {
   }
 
   login(data: User) {
-    console.log(data);
     const user = createSession(data);
     this.update({ user });
   }

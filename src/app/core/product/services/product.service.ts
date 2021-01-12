@@ -13,7 +13,9 @@ export class ProductService {
   get(): Observable<void> {
     const request = timer(500).pipe(
       mapTo(products),
-      map((response) => this.productStore.set(response))
+      map((response) => {
+        this.productStore.set(response);
+      })
     );
 
     return cacheable(this.productStore, request);
@@ -21,8 +23,8 @@ export class ProductService {
 
   getProduct(id: ID) {
     const product = products.find((current) => current.id === +id);
-    console.log(product, id);
-    return timer(1).pipe(
+
+    return timer(500).pipe(
       mapTo(product),
       tap((product) => this.productStore.add(product as Product))
     );

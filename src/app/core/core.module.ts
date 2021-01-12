@@ -10,7 +10,7 @@ const akitaLocalStorage = persistState({
 const akitaSessionStorage = persistState({
   key: 'akitaSessionStorage',
   storage: sessionStorage, // Default is localStorage
-  include: ['cart', 'product.price'],
+  include: ['cart'],
 });
 
 @NgModule({

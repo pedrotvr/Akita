@@ -6,7 +6,7 @@
     Products
   </h1>
 
-  <ng-container *ngIf="!(loading$ | async); else loadingTpl">
+  <ng-container *ngIf="!(productLoading$ | async); else loadingTpl">
 
     <!--Sorting-->
     <div class="col s12">

@@ -20,17 +20,21 @@ export class NavbarComponent {
     'Posts',
     'FormsManager',
   ];
-  count$: Observable<number>;
-  isLoggedIn$: Observable<boolean>;
+  count$!: Observable<number>;
+  isLoggedIn$!: Observable<boolean>;
+  userName$!: Observable<string>;
 
   constructor(
     private cartQuery: CartQuery,
     private authService: AuthService,
     private authQuery: AuthQuery,
     private router: Router
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.count$ = this.cartQuery.selectTotalQuantity$; //selectCount();
     this.isLoggedIn$ = this.authQuery.isLoggedIn$;
+    this.userName$ = this.authQuery.userFirstName$;
   }
 
   logout() {

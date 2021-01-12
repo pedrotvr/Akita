@@ -14,7 +14,7 @@ import { ProductQuery } from 'src/app/core/product/states/product.query';
 })
 export class ProductPageComponent implements OnInit {
   products$: Observable<Product[]> | undefined;
-  loading$: Observable<boolean> | undefined;
+  productLoading$: Observable<boolean> | undefined;
   search = new FormControl();
   sortControl = new FormControl('price');
 
@@ -26,7 +26,7 @@ export class ProductPageComponent implements OnInit {
 
   ngOnInit() {
     this.productService.get().subscribe();
-    this.loading$ = this.productQuery.selectLoading();
+    this.productLoading$ = this.productQuery.selectLoading();
 
     this.products$ = combineLatest([
       this.search.valueChanges.pipe(startWith('')),
@@ -39,7 +39,9 @@ export class ProductPageComponent implements OnInit {
   }
 
   addProductToCart({ id }: Product) {
-    this.cartService.addProductToCart(id);
+    this.cartService
+      .setLoading(id)
+      .subscribe((xpto) => this.cartService.addProductToCart(id));
   }
 
   subtract({ id }: Product) {

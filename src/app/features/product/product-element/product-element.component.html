@@ -9,11 +9,28 @@
     <p>{{product?.description}}</p>
   </div>
   <div class="card-action flex flex-end">
-    <button class="btn waves-effect waves-light deep-orange darken-2 mr" (click)="add.emit(product)">
-      <i class="material-icons">exposure_plus_1</i>
-    </button>
+    <ng-container *ngIf="!(cartLoading$ | async); else loadingCart">
+      <button class="btn waves-effect waves-light deep-orange darken-2 mr" (click)="add.emit(product)">
+          <i class="material-icons">exposure_plus_1</i>
+      </button>
+    </ng-container>
     <button class="btn waves-effect waves-light blue-grey lighten-3" (click)="subtract.emit(product)">
       <i class="material-icons">exposure_neg_1</i>
     </button>
   </div>
 </div>
+
+
+<ng-template #loadingCart>
+  <div class="preloader-wrapper small active">
+    <div class="spinner-layer spinner-green-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
