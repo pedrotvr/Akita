@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/pedrotvr/Akita/compare/v1.1.0...v1.2.0) (2021-01-12)
+
+
+### Features
+
+* Brown Bag completed ([3d888b7](https://github.com/pedrotvr/Akita/commit/3d888b7bdfa0640066bb28b495852b15d530f12e))
+
 ## [1.1.0](https://github.com/pedrotvr/Akita/compare/v1.0.0...v1.1.0) (2020-12-30)
 
 
